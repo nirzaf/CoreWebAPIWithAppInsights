@@ -68,6 +68,16 @@ namespace CoreWebAPIWithAppInsights.Controllers
         {
             throw new Exception();
         }
+
+        public IActionResult SuccessGet()
+        {
+            return Ok();
+        }
+
+        public IActionResult ForbidGet()
+        {
+            return Ok();
+        }
     }
 
     public class SampleInput
