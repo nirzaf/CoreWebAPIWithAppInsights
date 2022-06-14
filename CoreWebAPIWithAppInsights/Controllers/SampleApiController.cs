@@ -29,11 +29,11 @@ namespace CoreWebAPIWithAppInsights.Controllers
             switch (random.Next(1, 3))
             {
                 case 1:
-                    return RedirectPermanent(Url.Action("SampleBadRequestGet"));
+                    return RedirectPermanent(Url.Action("SampleBadRequestGet")!);
                 case 2:
-                    return RedirectPermanent(Url.Action("SuccessGet"));
+                    return RedirectPermanent(Url.Action("SuccessGet") ?? string.Empty);
                 case 3:
-                    return RedirectPermanent(Url.Action("ForbidGet"));
+                    return RedirectPermanent(Url.Action("ForbidGet") ?? string.Empty);
                 default:
                     return NotFound();
             }
